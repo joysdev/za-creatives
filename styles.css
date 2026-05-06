@@ -1,10 +1,11 @@
 * {
-    background-color: black;
+    background-color: #1A1A1A;
 }
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
-  color: gold;
+  /* color: #f4de62; */
+  color: #DDC05F;
 }
 
 h1 {
