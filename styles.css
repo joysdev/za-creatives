@@ -1,3 +1,31 @@
 * {
     background-color: black;
 }
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: gold;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  flex: 0 0 auto;
+}
+
+a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  white-space: nowrap;
+}
