@@ -1,18 +1,24 @@
 * {
-    background-color: #1A1A1A;
+    background-color: #171717;
 }
 
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
-  /* color: #f4de62; */
-  color: #DDC05F;
+  font-family: 'Manrope', Arial, sans-serif;
 }
 
-#img {
-  
+#logo {
+  mix-blend-mode: screen;
+  max-width: 20rem;
+  max-height: 20rem;
+  display: block;
+
 }
 
-ul {
+navbar {
+  color: #f4d18f;
+} 
+
+.nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -21,7 +27,7 @@ ul {
   list-style: none;
 }
 
-li {
+.nav li {
   flex: 0 0 auto;
 }
 
@@ -32,6 +38,45 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+h2, h3 {
+  color: white;
+
+}
+
+.divider {
+  height: 1px;
+  max-width: 25%;
+  background-color: #f4d18f;
+  margin: 24px 0;
+}
+
+#package-features {
+  color: white;
+}
+
+.gold-text {
+  color: #f4d18f;
+}
+
+.best-for {
+  font-style: italic;
+}
+
+#packages li{
+  list-style: none;
+  padding: 0;
+}
+
+#packages li::before {
+  content: "✓"; /* Unicode checkmark character */
+  color: white; /* Custom color */
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em; /* Ensures consistent spacing */
+  margin-left: -1em; /* Aligns mark to the left of the text */
+}
+
 
 .contact {
   max-width: 600px;
@@ -71,3 +116,4 @@ a {
   background: #DDC05F;
   cursor: pointer;
 }
+

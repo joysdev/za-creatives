@@ -5,21 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZA Creatives</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">-->
 </head>
 <body>
     <header>
-        <img src="zacreativeslogo.jpg" alt="ZA Creatives logo">
-        <nav>
+        <img id="logo" src="zacreativeslogo.jpg" alt="ZA Creatives logo">
+        <navbar class="nav">
              <ul>
                 <li>About</a></li>
-                <li>Packages</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#packages">PACKAGES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
   </ul>
         </nav>
     </header>
-    <section class="contact">
-  <h2>Get in Touch</h2>
+    
+<section id="packages" class="section packages">
+    <h2>PACKAGES</h2>
+        
+    <h3>STARTER</h3>
+        <p class="price"><span class="gold-text">$497<br>per month</p>
+            <p><span class="best-for">Best for: solopreneurs just getting started</span></span>
+            <div class="divider"></div>
+            <ul id="package-features">
+                <li>8 posts/month</li>
+                <li>Branded graphics + copywriting</li>
+                <li>Monthly performance summary</li>
+                <li>1 revision round per post</li>
+                <li>1 strategy call/month</li>
+            </ul>
+         </p>
+    <h3>GROWTH</h3>
+         <p class="price"><span class="gold-text">$997<br>per month</span></p>
+            <p><span class="best-for">Best for: small businesses ready to scale</span></span>
+            <div class="divider"></div>
+            <ul id="package-features">
+                <li>16 posts/month</li>
+                <li>Custom content calendar</li>
+                <li>Reels & short-form scripts</li>
+                <li>Bi-weekly analytics report</li>
+                <li>2 revision rounds per post</li>
+                <li>2 strategy calls/month</li>
+            </ul>
+         </p>
+
+    <h3>PRO</h3>
+         <p class="price"><span class="gold-text">$1797<br>per month</p>
+            <p><span class="best-for">Best for: established businesses wanting a full partner</span></span>
+            <div class="divider"></div>
+            <ul id="package-features">
+                <li>24 posts/month</li>
+                <li>Full content strategy + calendar</li>
+                <li>Stories, carousels, reels & captions</li>
+                <li>Weekly dashboard + monthly deep-dive</li>
+                <li>Unlimited revisions</li>
+                <li>3 strategy calls/month</li>
+            </ul>
+         </p>
+
+    <h3>INTRO TRIAL</h3>
+         <p class="price"><span class="gold-text"><p class="price">$197</p>
+            <p><span class="best-for">businesses looking to test our fit before committing to full content strategy</span></span>
+            <div class="divider"></div>
+            <ul id="package-features">
+                <li>FREE strategy call</li>
+                <li>3 custom posts (reel, photos, carousel) </li>
+            </ul>
+         </p>
+
+</section>
+<section id="contact" class="section contact">
+  <h2>GET IN TOUCH</h2>
 
   <div class="contact-card">
     <p class="label">Email</p>
@@ -30,7 +88,7 @@
       </a>
 
       <button class="copy-btn" onclick="copyEmail()">
-        Copy
+        COPY
       </button>
     </div>
   </div>
