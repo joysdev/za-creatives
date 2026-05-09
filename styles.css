@@ -1,33 +1,35 @@
 * {
-    background-color: #171717;
+  background-color: #292929;
 }
 
 body {
   font-family: 'Manrope', Arial, sans-serif;
 }
 
-#logo {
+.logo {
   mix-blend-mode: screen;
   max-width: 20rem;
   max-height: 20rem;
   display: block;
-
 }
 
-navbar {
-  color: #f4d18f;
-} 
+.tagline {
+  color: whitesmoke;
+  font-style: italic;
+}
 
-.nav ul {
+
+.nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 2rem;
   padding: 0;
   list-style: none;
+  color: whitesmoke;
 }
 
-.nav li {
+.nav-list li {
   flex: 0 0 auto;
 }
 
@@ -39,28 +41,66 @@ a {
   color: inherit;
 }
 
+h1 {
+  color: white;
+}
+
 h2, h3 {
   color: white;
 
 }
 
+.packages-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
 .divider {
   height: 1px;
-  max-width: 25%;
+  max-width: 100%;
   background-color: #f4d18f;
   margin: 24px 0;
 }
 
-#package-features {
+.package-features {
   color: white;
 }
 
-.gold-text {
+.package-features li {
+  line-height: 1.8;
+}
+
+.price {
+  color: #f4d18f;
+  font-size: 2rem;
+}
+
+.billing-cycle {
   color: #f4d18f;
 }
 
 .best-for {
   font-style: italic;
+  color: #f4d18f;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  border: .08rem solid #D2A067;
+  padding: 1.5rem;
 }
 
 #packages li{
@@ -69,12 +109,12 @@ h2, h3 {
 }
 
 #packages li::before {
-  content: "✓"; /* Unicode checkmark character */
-  color: white; /* Custom color */
+  content: "✓"; 
+  color: white;  
   font-weight: bold;
   display: inline-block; 
-  width: 1em; /* Ensures consistent spacing */
-  margin-left: -1em; /* Aligns mark to the left of the text */
+  width: 1em;  
+  margin-left: -1em; 
 }
 
 
