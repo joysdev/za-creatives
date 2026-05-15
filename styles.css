@@ -2,20 +2,44 @@
   background-color: #292929;
 }
 
+
+
 body {
   font-family: 'Manrope', Arial, sans-serif;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /*display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;*/
+
+}
+
 .logo {
   mix-blend-mode: screen;
-  max-width: 20rem;
-  max-height: 20rem;
+  max-width: 15rem;
+  max-height: 15rem;
   display: block;
 }
 
 .tagline {
   color: whitesmoke;
   font-style: italic;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
 }
 
 
@@ -54,6 +78,8 @@ h2, h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+
+  
 }
 
 .divider {
@@ -224,7 +250,7 @@ display: flex;
 
 .contact {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .contact-card {
