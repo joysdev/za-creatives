@@ -1,27 +1,28 @@
 * {
   background-color: #292929;
+  
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
 
 body {
   font-family: 'Manrope', Arial, sans-serif;
+  overflow: visible;
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /*display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;*/
-
+  background-color: #292929;
+  gap: 2rem;
 }
 
 .logo {
@@ -58,9 +59,6 @@ nav {
 }
 
 a {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  white-space: nowrap;
   text-decoration: none;
   color: inherit;
 }
@@ -74,12 +72,17 @@ h2, h3 {
 
 }
 
-.packages-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+#packages {
+  scroll-margin-top: 200px;
+}
 
-  
+
+
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem;
 }
 
 .divider {
@@ -113,34 +116,9 @@ h2, h3 {
   overflow-wrap: break-word;
 }
 
-.packages-container {
-  /*display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  align-items: stretch;
 
-display: flex;
-  justify-content: center;
-  margin: 0 auto;*/
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 2rem;
-
-
-
-}
 
 .package {
-  /*margin: 0 auto;
-
-  max-width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  min-width: 0;*/
   border: .08rem solid #D2A067;
   padding: 1.5rem;
 }
@@ -183,33 +161,16 @@ display: flex;
   margin-left: -1em; 
 }
 
-/*.package-discount {
-  box-sizing: border-box;
-  min-width: 0;
-  grid-column: 1 / -1;
-
-}*/
-
 .package-discount {
- 
- 
-
-
   grid-column: 2 / 4;
   grid-row: 2;
-
   justify-self: center;
   align-self: center;
-  
 }
 
 .package-discount-inner {
-  
   position: relative;
   z-index: 1;
-  
-
-
   display: inline-flex;
   justify-content: center;
   border: .2rem solid #D2A067;
@@ -219,13 +180,7 @@ display: flex;
   font-weight: bold;
   letter-spacing: .5rem;
   box-sizing: border-box;
-
-  background-color: #292929;
-  
-  
-  
-  
-  
+  background-color: #292929; 
 }
 
 .package-discount-inner::before {
@@ -255,8 +210,7 @@ display: flex;
 
 .contact-card {
   padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  border: 1px solid #D2A067;
 }
 
 .label {
@@ -272,18 +226,50 @@ display: flex;
   gap: 1rem;
 }
 
-.email-link {
+/*.email-link {
   text-decoration: none;
   font-weight: 500;
   color: #DDC05F;
-}
+}*/
 
-.copy-btn {
+.copy-btn, .btn, .email-link {
+  color:  #DDC05F;
   font: inherit;
   padding: 0.4rem 0.75rem;
-  border: 1px solid #ccc;
+  border: .08rem solid whitesmoke;
   border-radius: 8px;
-  background: #DDC05F;
+  background: #292929;
   cursor: pointer;
+
+  transition: all 0.2s ease;
+
 }
 
+.copy-btn:hover,
+.btn:hover {
+  background: whitesmoke;
+  color: #292929;
+}
+
+.copy-btn:focus-visible,
+.btn:focus-visible
+.email-link-visible {
+  outline: .1rem solid  #DDC05F;
+  outline-offset: 1rem;
+}
+
+.email-link {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border: 0.08rem solid whitesmoke;
+  border-radius: 8px;
+  background: #292929;
+  color: #DDC05F;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.email-link:hover {
+  background: whitesmoke;
+  color: #292929;
+}
