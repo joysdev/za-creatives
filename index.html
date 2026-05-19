@@ -13,36 +13,21 @@
 <body>
 
     <header>
-  <div class="hero">
-    <img class="logo" src="zacreativeslogo.jpg" alt="Brand logo">
+        <img class="logo" src="zacreativeslogo.jpg" alt="Brand logo">
 
-    <h1>SOCIAL MEDIA SERVICES</h1>
+        <div class="hero">
+        <h1>SOCIAL MEDIA SERVICES</h1>
+            <p class="tagline">Empowering businesses to grow through strategic content & analytics</p>
+        </div>
 
-    <p class="tagline">
-      Empowering businesses to grow through strategic content & analytics
-    </p>
-  </div>
-
-  <nav class="navbar">
-  <ul class="nav-list">
-    <li><a href="#packages">Packages</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-</header>
-
-
-    <!--<header>
-        <img id="logo" src="zacreativeslogo.jpg" alt="ZA Creatives logo">
-        <navbar class="nav">
-             <ul>
-                <li>About</a></li>
-                <li><a href="#packages">PACKAGES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-  </ul>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#packages">Review Packages</a></li>
+                <li><a href="#contact">Get Started</a></li>
+            </ul>
         </nav>
-    </header>-->
+    </header>
+    <main>
     
 <section id="packages" class="section packages">
     <h2>PACKAGES</h2>
@@ -65,7 +50,7 @@
          </p>
     </div>
 
-    <div class="package">
+    <div class="package" id="growth-package">
     <h3>GROWTH</h3>
          <p><span class="price">$997</span><br><span class="billing-cycle">per month</p></span>
             <p><span class="best-for">Best for: small businesses ready to scale</span>
@@ -108,10 +93,15 @@
          </p>
          </div>
     <div class="package-discount">
+        
         <div class="package-discount-inner">
         <p>10% OFF FOR ANNUAL UPFRONT PAYMENT</p>
         </div>
     </div>
+
+
+
+
          </div>
 
 </section>
@@ -119,19 +109,22 @@
   <h2>GET IN TOUCH</h2>
 
   <div class="contact-card">
-    <p class="label">Email</p>
-
-    <div class="email-row">
+     <div class="email-row">
       <a class="email-link" href="mailto:zoerarnold@gmail.com">
         zoerarnold@gmail.com
       </a>
 
-      <button class="copy-btn" onclick="copyEmail()">
-        COPY
-      </button>
+      <button class="copy-btn" onclick="copyEmail()">Copy</button>
+
+      <div class="contact-options">
+  <a class="btn" href="tel:+17204704347">Call</a>
+  <a class="btn secondary" href="sms:+17204704347">Text</a>
+</div>
+
     </div>
   </div>
 </section>
+</main>
 
 </body>
 
