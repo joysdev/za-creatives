@@ -133,7 +133,7 @@ h2, h3 {
   grid-row: 1;
 }
 
-.growth-package {
+#growth-package {
   border: .2rem solid #D2A067;
 }
 
