@@ -1,18 +1,30 @@
-body {
+/*body {
   background-color: #292929;
-  
-}
+  background-color: #39655C; #407368
+  }*/
 
 html {
   scroll-behavior: smooth;
 }
 
-
+:root {
+  --bg: hsl(201, 83%, 14%) /*hsl(200, 89%, 21%); #064D56; /* #064851/*#28483F*/ /*#32584e*/;
+  --text: #FBF1DF;/*#f3e3bf;*/
+  --goldtext: #f2dcad;/* #f5e1bc;#f4d18f;*/
+  --accent: #7e6c4e;
+  --surface: hsl(200, 90%, 23%);
+  --border: #f2dcad; /* consolidate with --goldtext*/
+}
 
 body {
   font-family: 'Manrope', Arial, sans-serif;
   overflow: visible;
+  /*background-color: #39655C*/
+  background-color: var(--bg);
+  margin: 0;
 }
+
+
 
 header {
   position: sticky;
@@ -21,19 +33,39 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #292929;
+  background-color: var(--bg);
   gap: 2rem;
+
+  height: 6rem; 
+  
+
+  padding: 1.5rem 2rem 2rem 0;
+
+  overflow: hidden;
 }
 
 .logo {
   mix-blend-mode: screen;
-  max-width: 15rem;
-  max-height: 15rem;
-  display: block;
+  width: auto;
+  height: 18rem;
+  /*display: block;
+  padding: 1rem 2rem 0 2rem;*/
+  margin: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0;
+
 }
 
+.logo img {
+  display: block;
+  height: 18rem;
+  width: auto;
+}
+
+
 .tagline {
-  color: whitesmoke;
+  color: var(--text);
   font-style: italic;
 }
 
@@ -51,7 +83,7 @@ nav {
   gap: 2rem;
   padding: 0;
   list-style: none;
-  color: whitesmoke;
+  color: var(--text);
 }
 
 .nav-list li {
@@ -64,11 +96,11 @@ a {
 }
 
 h1 {
-  color: white;
+  color: var(--text);
 }
 
 h2, h3 {
-  color: white;
+  color: var(--text);
 
 }
 
@@ -76,6 +108,9 @@ h2, h3 {
   scroll-margin-top: 200px;
 }
 
+.package {
+  background-color: var(--surface); /*#335B50;*/
+}
 
 
 /*.packages-container {
@@ -132,7 +167,7 @@ h2, h3 {
 }
 
 .package-features {
-  color: white;
+  color: var(--text);
 }
 
 .package-features li {
@@ -140,17 +175,17 @@ h2, h3 {
 }
 
 .price {
-  color: #f4d18f;
+  color: var(--goldtext); /*FAEBCC*/
   font-size: 2rem;
 }
 
 .billing-cycle {
-  color: #f4d18f;
+  color: var(--goldtext);
 }
 
 .best-for {
   font-style: italic;
-  color: #f4d18f;
+  color: var(--goldtext);
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -158,7 +193,7 @@ h2, h3 {
 
 
 .package {
-  border: .08rem solid #D2A067;
+  border: .08rem solid #f2dcad; /* #F5DEB2 #D2A067*/
   padding: 1.5rem;
 }
 
@@ -177,6 +212,10 @@ h2, h3 {
   border: .2rem solid #D2A067;
 }*/
 
+#card2 {
+  border: .1rem solid var(--border);/*#F5DEB2*/
+}
+
 /*.package:nth-child(3) {
   grid-column: 3;
   grid-row: 1;
@@ -194,7 +233,7 @@ h2, h3 {
 
 #packages li::before {
   content: "✓"; 
-  color: white;  
+  color: var(--text);  
   font-weight: bold;
   display: inline-block; 
   width: 1em;  
@@ -213,21 +252,26 @@ h2, h3 {
   z-index: 1;
   display: inline-flex;
   justify-content: center;
-  border: .2rem solid #D2A067;
+  border: .1rem solid var(--border); /*#F5DEB2 #D2A067*/;
   padding: 2rem;
-  color: whitesmoke;
+  color: var(--goldtext);
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: .5rem;
   box-sizing: border-box;
-  background-color: #292929; 
+  /*background-color: #292929;*/ 
 }
 
 .package-discount-inner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(ellipse at center, rgb(96, 96, 96) 0%, transparent 70%);
+  background-image: radial-gradient(
+  ellipse at center,
+  /*rgb(205, 176, 147) 0%, */
+  /*hsl(30, 37%, 54%) 10%,*/
+  hsl(200, 100%, 43%) 10%,
+  hsl(200, 90%, 33%) 40%);/*rgb(96, 96, 96)*/
   filter: blur(1rem);
   z-index: 0;
   pointer-events: none;
@@ -236,8 +280,6 @@ h2, h3 {
 .package-discount-inner p {
   position: relative;
   z-index: 1;
-
-
   background: transparent;
   margin: 0;
   justify-self: center;
@@ -250,7 +292,7 @@ h2, h3 {
 
 .contact-card {
   padding: 1rem;
-  border: 1px solid #D2A067;
+  border: 1px solid var(--border);
 }
 
 .label {
@@ -272,44 +314,46 @@ h2, h3 {
   color: #DDC05F;
 }*/
 
-.copy-btn, .btn, .email-link {
-  color:  #DDC05F;
+#copy-btn, .btn, .email-link {
+  color:  var(--text);
   font: inherit;
   padding: 0.4rem 0.75rem;
-  border: .08rem solid whitesmoke;
+  border: .08rem solid var(--text);
   border-radius: 8px;
-  background: #292929;
+  background: var(--surface);
   cursor: pointer;
 
   transition: all 0.2s ease;
 
 }
 
-.copy-btn:hover,
+#copy-btn:hover,
 .btn:hover {
-  background: whitesmoke;
-  color: #292929;
+  background: var(--text);
+  color: var(--surface);
 }
 
-.copy-btn:focus-visible,
+#copy-btn:focus-visible,
 .btn:focus-visible
 .email-link-visible {
-  outline: .1rem solid  #DDC05F;
+  outline: .1rem solid  var(--border);
   outline-offset: 1rem;
 }
 
 .email-link {
   display: inline-block;
   padding: 0.4rem 0.75rem;
-  border: 0.08rem solid whitesmoke;
+  border: 0.08rem solid var(--goldtext);
   border-radius: 8px;
-  background: #292929;
-  color: #DDC05F;
+  background: var(--surface);
+  color: var(--text);
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .email-link:hover {
-  background: whitesmoke;
-  color: #292929;
+  background: var(--text);
+  color: var(--background);
 }
+
+/* nice golds #D2A067 #DDC05F;*/
