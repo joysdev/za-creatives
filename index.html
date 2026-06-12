@@ -32,7 +32,7 @@
     <main>
     
 <section id="packages" class="section packages">
-    <h2>PACKAGES</h2>
+    <h2>Choose your package</h2>
 
     <div class="packages-container">
 
@@ -90,8 +90,9 @@
         <p>10% OFF FOR ANNUAL UPFRONT PAYMENT</p>
         </div>
     </div>
-
+    <h2 class="intro-heading">Not sure? Try a one-time session</h2>
     <div class="package" id="card5">
+    
     <h3>INTRO TRIAL</h3>
             <p><span class="price">$197</span></p>
             <p><span class="best-for">Best for: businesses looking to test our fit before committing to full content strategy</span></p>
@@ -102,16 +103,31 @@
             </ul>
          </p>
          </div>
-    
-
-
-
 
          </div>
 
 </section>
+
 <section id="contact" class="section contact">
-  <h2>GET IN TOUCH</h2>
+  <h2>Get in touch</h2>
+
+  <div class="form">
+    <form id="form">
+        <fieldset>
+            <label for="name" id="name-label">Name</label>
+                <input required id="name" type="text" placeholder="First, Last">
+            <label for="email" id="email-label">Email</label>
+                <input required id="email" type="email" placeholder="risingstar@email.com">
+            <label for="phone">Phone Number:<br /><small>Format: 123-456-7890</small></label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+        </fieldset>
+            <label for="comments">Questions or additional details?</label>
+                <textarea cols="30" rows="10" name="comments" id="comments"></textarea>
+            <input type="submit" value="Submit" id="submit">
+
+        
+    </form>
+  </div>
 
   <div class="contact-card">
      <div class="email-row">
