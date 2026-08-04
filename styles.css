@@ -8,12 +8,12 @@ html {
 }
 
 :root {
-  --bg: hsl(201, 83%, 14%); /*hsl(200, 89%, 21%); #064D56; /* #064851/*#28483F*/ /*#32584e*/
-  --text: #FBF1DF;/*#f3e3bf;*/
-  --goldtext: #f2dcad;/* #f5e1bc;#f4d18f;*/
+  --bg: #ffffff;/*hsl(201, 83%, 14%); hsl(200, 89%, 21%); #064D56; /* #064851/*#28483F*/ /*#32584e*/
+  --text: #030303;/*#FBF1DF;#f3e3bf;*/
+  --goldtext: #8F6B00;/*#f2dcad;/* #f5e1bc;#f4d18f;*/
   --accent: #7e6c4e;
-  --surface: hsl(200, 90%, 23%);
-  --border: #f2dcad; /* consolidate with --goldtext*/
+  --surface: #ffffff; /*hsl(200, 90%, 23%);*/
+  --border: #8F6B00;/*#f2dcad;*/ /* consolidate with --goldtext*/
 }
 
 body {
@@ -44,6 +44,10 @@ header {
   overflow: hidden;
 }
 
+.hero {
+  text-align: center;
+}
+
 .logo {
   mix-blend-mode: screen;
   width: auto;
@@ -53,7 +57,7 @@ header {
   margin: 0;
   overflow: hidden;
   padding: 0 !important;
-  margin: 0;
+  border: 1rem solid #111111;
 
 }
 
@@ -102,6 +106,11 @@ h1 {
 h2, h3 {
   color: var(--text);
 
+
+}
+
+h2 {
+  text-align: center;
 }
 
 #packages {
@@ -198,7 +207,7 @@ h2, h3 {
 
 
 .package {
-  border: .08rem solid #f2dcad; /* #F5DEB2 #D2A067*/
+  border: .08rem solid var(--border); /* #F5DEB2 #D2A067*/
   padding: 1.5rem;
 }
 
@@ -218,7 +227,7 @@ h2, h3 {
 }*/
 
 #card2 {
-  border: .1rem solid var(--border);/*#F5DEB2*/
+  border: .11rem solid var(--border);/*#F5DEB2*/
 }
 
 /*.package:nth-child(3) {
